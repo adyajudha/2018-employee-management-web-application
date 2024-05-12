@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Atur font dan background*/
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fff;
+}
+
+.body-login {
+    background: #038ADE;
+}
+
+/*Atur container dgn flexbox dan login*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Atur lebar login dan warna backgroundnya*/
+.login-box {
+    margin-top: 150px;
+    flex-basis: 400px;
+    background: #FFF;
+    padding: 20px;
+}
+
+/*Atur judul*/
+.login-box h2 {
+    border-bottom: 1px solid #CCC;
+    color: #555;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+
+/*Atur tag input form*/
+input, select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0px 0;
+    border: 1px solid #CCC;
+}
+
+/* Atur tombol submit */
+/* input[type=submit] {
+    background-color: #038ADE;
+    border: none;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+/* Atur desain tombol login*/
+.login-box input[type="submit"] {
+    display: inline-block;
+    /* max-width: 150px; */
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    background: #038ADE;
+    cursor: pointer;
+}
+
+.login-box input[type="submit"]:hover {
+    background: #02679c;
+}
+
+/*Atur Header*/
+header {
+    background: #038ADE;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+/*Atur lebar menu*/
+aside {
+    flex: 20%;
+    background: #222;
+}
+
+/*Atur lebar konten utama*/
+section.main {
+    flex: 80%;
+    background: #fff;
+    min-height: 530px;
+    padding: 15px 20px;
+}
+
+.section-tabel {
+    flex: 80%;
+    background: #fff;
+    min-height: 530px;
+    padding: 15px 20px;
+}
+
+/*Atur footer*/
+footer {
+    background: #ccc;
+    color: #555;
+    padding: 25px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Atur desain judul halaman data tabel */
+.judul {
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+/* Atur tabel */
+.tabel {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.tabel th, .tabel td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabel th {
+    background: #eee;
+}
+
+/* Atur desain tombol pada data tabel */
+.tombol {
+    display: inline-block;
+    max-width: 150px;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    background: #038ADE;
+    cursor: pointer;
+}
+
+.tombol .edit, .tombol .hapus {
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.tombol.hapus {
+    background: #fc4c4c;
+}
+
+/* Atur form */
+.form-group {
+    clear: both;
+        display: flex;
+        align-items: center;
+        /* Mengatur konten vertikal ke tengah */
+}
+
+.form-group label{
+    display: block;
+    padding: 15px 0;
+    float: left;
+    width: 30%;
+    font-weight: bold;
+}
+
+.form-group .input {
+    display: block;
+    width: 50%;
+    float: left;
+    align-items: center;
+}
+
+input[type=radio] {
+    width: 50px;
+    margin: 0 5px;
+}
+.tombol.simpan {
+    background: #038ADE;
+}
+.tombol.reset{
+    background: #fb8307;
+}
+
+/*Atur responsive*/
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .form-group label, .form-group .input {
+        width: 100%;
+    }
+}
+
+/*Navigasi*/
+.menu {
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px dotted #444;
+}
+
+.menu a {
+    display: block;
+    padding: 20px 20px;
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #000;
+}
