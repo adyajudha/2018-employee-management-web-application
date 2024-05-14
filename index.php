@@ -79,7 +79,7 @@
             </nav>
             <div class="col-md-10 col-sm-9 offset-md-2 offset-sm-3 mb-3">
                 <section class="main">
-                    <!-- <?php include "konten.php"; ?> -->
+                    <?php include "konten.php"; ?>
                 </section>
             </div>
         </div>
