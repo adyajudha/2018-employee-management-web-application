@@ -1,15 +1,14 @@
 <?php
     session_start();
     ob_start();
-
     include "library/config.php";
-
     if(empty($_SESSION['username'])or empty($_SESSION['password'])){
         echo "<p align='center'>Anda harus login terlebih dahulu</p>";
         echo "<meta http-equiv='refresh' content='0;url=login.php'>";
     } else {
         define('INDEX', true);
 ?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
@@ -17,7 +16,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="open-iconic-master/font/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="DataTables/datatables.min.css">
+    <link rel="stylesheet" href="bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="summernote-0.8.18-dist/summernote-bs4.css">
 </head>
 <body class="h-100">
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top-bg-info bg-primary">
@@ -92,6 +95,15 @@
 
     <script src="js/jQuery-3.3.1.min.js"></script>
     <script src="bootstrap-4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
+    <script>
+        $(function() {
+            $('.table').DataTable();
+            $('#tanggal').datepicker();
+            $('#keterangan').summernote();
+        });
+    </script>
 </body>
 </html>
 <?php 
