@@ -2,8 +2,10 @@
     if(!defined('INDEX')) die("");
 ?>
 <h2 class="judul">Data Pegawai</h2>
+<!-- Tombol Tambahkan Data Pegawai -->
 <a href="?hal=pegawai_tambah" class="tombol">Tambah</a>
 <table class="tabel">
+    <!-- Judul Kolom -->
     <thead>
         <tr>
             <th>No</th>
@@ -16,6 +18,7 @@
             <th>Aksi</th>
         </tr>
     </thead>
+    <!-- Isi Data Kolom -->
     <tbody>
         <?php
             $query = mysqli_query($con, "SELECT * FROM pegawai LEFT JOIN jabatan ON pegawai.id_jabatan=jabatan.id_jabatan ORDER BY pegawai.id_pegawai DESC");
@@ -31,6 +34,7 @@
             <td><?= $data['tgl_lahir']?></td>
             <td><?= $data['nama_jabatan']?></td>
             <td><center><?= $data['keterangan']?></center></td>
+            <!-- Tombol Edit dan Hapus -->
             <td>
                 <a href="?hal=pegawai_edit&id=<?=$data['id_pegawai']?>" class="tombol edit">Edit</a>
                 <a href="?hal=pegawai_hapus&id=<?=$data['id_pegawai']?>&foto=<>=$data['foto']?>" class="tombol hapus">Hapus</a>

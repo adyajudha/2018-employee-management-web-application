@@ -1,6 +1,6 @@
 <?php
     if(!defined('INDEX')) die("");
-    // Hubungkan ke Basis Data
+    // Mendapatkan ID Jabatan dari Basis Data
     $query = mysqli_query($con, "SELECT * FROM jabatan WHERE id_jabatan='$_GET[id]'");
     $data = mysqli_fetch_array($query);
 ?>
