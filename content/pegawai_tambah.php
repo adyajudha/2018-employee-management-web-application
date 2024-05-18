@@ -40,11 +40,12 @@
     </div>
     <!-- Tanggal Lahir Pegawai -->
     <div class="form-group row">
-        <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>       
+        <label for="tanggal" class="col-sm-2 col-form-label">Tanggal Lahir</label>       
         <div class="col-sm-2">
-            <input type="text" name="tanggal" id="tanggal" class="form-control">
+            <input type="text" name="tanggal" id="tanggal" class="form-control datepicker" placeholder="dd-mm-yyyy" required>
         </div>
     </div>
+
     <!-- Jabatan Pegawai -->
     <div class="form-group row">
         <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>

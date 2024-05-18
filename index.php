@@ -26,7 +26,7 @@
     </head>
     <body class="h-100">
         <!-- Header -->
-        <nav class="navbar navbar-expand-sm navbar-dark sticky-top-bg-info bg-primary">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary sticky-top">
             <a href="#" class="navbar-brand">Manajemen Pegawai</a>
             <!-- Tampilan Mobile -->
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidebar" aria-control="sidebar" aria-expanded="false" aria-label="Toggle Navigation">
@@ -105,7 +105,11 @@
         <script>
             $(function() {
                 $('.table').DataTable();
-                $('#tanggal').datepicker();
+                $('.datepicker').datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true,
+                    todayHighlight: true
+                });
                 $('#keterangan').summernote();
             });
         </script>
